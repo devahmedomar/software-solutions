@@ -1,0 +1,50 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 60px;
+    width: 60px;
+    outline: var(--secondaryColor);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid var(--secondaryColor);
+    background-image: none;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.carousel-control-prev-icon{
+    border-right: 1px solid #fff;
+}
+.carousel-control-next-icon{
+    border-left: 1px solid #fff;
+
+}
+
+.carousel-control-next-icon:after,
+.carousel-control-prev-icon:after {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background-color: var(--secondaryColor);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.carousel-control-next-icon:after {
+    content: '>';
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+
+}
+.testimonial .rate{
+    margin-bottom: 10px;
+}
+.testimonial .rate i{
+    color: #FFB545;
+}

@@ -1,0 +1,56 @@
+footer .logo {
+    max-height: 40px;
+}
+
+.separator {
+    border-bottom: 0.75px solid rgba(165, 165, 165, .3);
+    padding-bottom: 16px;
+}
+
+footer h3 {
+    margin: 22px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer .ser-list li {
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--grayColor);
+    transition: all .3s ease-in-out;
+
+}
+
+footer ul li a {
+    display: inline-block;
+    margin: 8px 0;
+    font-size: 15px;
+    color: var(--grayColor);
+    transition: all .3s ease-in-out;
+
+}
+
+footer ul li a:hover,
+footer .ser-list li:hover {
+    color: var(--secondaryColor);
+    font-weight: 600;
+    transform: translateX(1%);
+}
+
+.contact-info {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    border-top-width: .75px;
+    border-top-style: solid;
+    border-bottom-width: .75px;
+    border-bottom-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, rgba(108, 108, 108, .2) 0%, #fff 70%);
+    border-right: 1px solid  rgba(108, 108, 108, .2);
+    border-left: 1px solid  rgba(108, 108, 108, .4);
+}
