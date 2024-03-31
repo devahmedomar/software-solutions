@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.css']
 })
-export class TeamComponent {
+export class TeamComponent implements OnInit {
+    ngOnInit(): void {
+        Aos.init({startEvent: 'scroll'})
+      }
   slides = [
     {img: "../../../../../assets/images/team/1.png",name:"Ahmed Omar",title:"Frontend Web Developer"},
     {img: "../../../../../assets/images/team/2.png",name:"Ahmed Omar",title:"Frontend Web Developer"},
