@@ -22,6 +22,7 @@
     "@angular/router": "^16.0.0",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@types/aos": "^3.0.7",
+    "angular-cli-ghpages": "^2.0.0-beta.2",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
