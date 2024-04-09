@@ -1,39 +1,64 @@
 <section class="portfolio text-center">
-    <div class="container">
-        <h2 class="section-header">Portfolio</h2>
-        <div class="parent mt-5">
-            <div class="portfolio-bg rounded-4 p-3" data-aos="fade-right">
+  <div class="container">
+    <h2 class="section-header">Portfolio</h2>
+    <div class="parent mt-5">
+      <div class="portfolio-bg rounded-4 p-3" *ngFor="let portfolio of portfolios" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="tag py-2 rounded-2 my-3">{{portfolio?.type}}</div>
+            <h3>{{portfolio?.title}}</h3>
+            <p class="lh-lg">
+              {{portfolio?.body}}
+            </p>
+          </div>
+          <div class="col-md-5 rounded-3 mt-4">
+            <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolio.images[0]?.file_name"
+              class="img-fluid rounded-3" alt="">
+          </div>
+        </div>
+        <div class="row" *ngIf="portfolio.projects?.length>0">
+          <div class="col-md-6">
+            <h4 class="mt-3">Features</h4>
+            <ul>
+              <li *ngFor="let category of portfolio?.projects">{{category?.category}}</li>
+            </ul>
+          </div>
+          <div class="col-md-6 d-flex justify-content-between mt-3 other-images" *ngIf="portfolio?.images[1]">
+            <div class="p-1" *ngIf="portfolio?.images[1]">
+              <img src="assets/images/services1.svg" class="w-100 h-75" alt="">
+            </div>
+            <div class="p-1" *ngIf="portfolio?.images[2]">
+              <img src="assets/images/services1.svg" class="w-100" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="portfolio-bg rounded-4 p-3" data-aos="fade-up">
                 <div class="row">
-                    <div class="col-md-7">
-                        <div class="tag py-2 rounded-2 my-3">Mobile Application</div>
-                        <h3>EduCaring</h3>
-                        <p class="lh-lg">
-                            Morbi sit egestas dignissim pharetra, sed amet. Tempus justo senectus risus ac vel, velit,
-                            nunc. Eget commodo eget in aliquam facilisi facilisi nec magna hendrerit. Placerat ipsum sit
-                            tellus urna, faucibus aenean lorem faucibus integer.
-                        </p>
+                    <div class="col-md-8">
+                        <div class="tag py-2 rounded-2 my-3">{{portfolios[1].type}}</div>
+                        <h3>{{portfolios[1].title}}</h3>
                     </div>
-                    <div class="col-md-5 rounded-3 mt-4">
-                        <img src="assets/images/portfolio1.svg" class="img-fluid rounded-3" alt="">
+                    <div class="col-md-4 rounded-3 mt-4">
+                        <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[1].images[0].file_name" class="img-fluid rounded-3" alt="">
                     </div>
                 </div>
+                <p class="lh-lg mt-3">
+                  {{portfolios[1].body}}
+                </p>
                 <div class="row">
                     <div class="col-md-6">
                         <h4 class="mt-3">Features</h4>
                         <ul>
-                            <li>feature 1</li>
-                            <li>feature 2</li>
-                            <li>feature 3</li>
-                            <li>feature 4</li>
-                            <li>feature 5</li>
-                        </ul>
+                          <li *ngFor="let category of categories">{{category}}</li>
+                      </ul>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-between mt-3 other-images">
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100 h-75" alt="">
+                    <div class="col-md-6 d-flex justify-content-between mt-3 other-images" *ngIf="portfolios[1].images[1]">
+                        <div class="p-1" *ngIf="portfolios[1].images[1]">
+                            <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[1].images[1].file_name" class="w-100 h-75" alt="">
                         </div>
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100" alt="">
+                        <div class="p-1" *ngIf="portfolios[1].images[2]">
+                            <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[1].images[2].file_name" class="w-100" alt="">
                         </div>
                     </div>
                 </div>
@@ -41,89 +66,45 @@
             <div class="portfolio-bg rounded-4 p-3" data-aos="fade-up">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="tag py-2 rounded-2 my-3">Web Application</div>
-                        <h3>EduCaring</h3>
+                        <div class="tag py-2 rounded-2 my-3">{{portfolios[2].type}}</div>
+                        <h3>{{portfolios[2].title}}</h3>
                     </div>
                     <div class="col-md-4 rounded-3 mt-4">
-                        <img src="assets/images/portfolio1.svg" class="img-fluid rounded-3" alt="">
+                        <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[2].images[0].file_name" class="img-fluid rounded-3" alt="">
                     </div>
                 </div>
                 <p class="lh-lg mt-3">
-                    Morbi sit egestas dignissim pharetra, sed amet. Tempus justo senectus risus ac vel, velit,
-                    nunc. Eget commodo eget in aliquam facilisi facilisi nec magna hendrerit. Placerat ipsum sit
-                    tellus urna, faucibus aenean lorem faucibus integer.
+                    {{portfolios[2].body}}
                 </p>
                 <div class="row">
                     <div class="col-md-6">
                         <h4 class="mt-3">Features</h4>
                         <ul>
-                            <li>feature 1</li>
-                            <li>feature 2</li>
-                            <li>feature 3</li>
-                            <li>feature 4</li>
-                            <li>feature 5</li>
-                        </ul>
+                          <li *ngFor="let category of categories">{{category}}</li>
+                      </ul>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-between mt-3 other-images">
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100 h-75" alt="">
+                    <div class="col-md-6 d-flex justify-content-between mt-3 other-images" *ngIf="portfolios[2].images[1]">
+                        <div class="p-1" *ngIf="portfolios[2].images[1]">
+                            <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[2].images[1].file_name" class="w-100 h-75" alt="">
                         </div>
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100" alt="">
+                        <div class="p-1" *ngIf="portfolios[2].images[2]">
+                            <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[2].images[2].file_name" class="w-100" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="portfolio-bg rounded-4 p-3" data-aos="fade-down">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="tag py-2 rounded-2 my-3">UI/UX</div>
-                        <h3>EduCaring</h3>
-                    </div>
-                    <div class="col-md-4 rounded-3 mt-4">
-                        <img src="assets/images/portfolio1.svg" class="img-fluid rounded-3" alt="">
-                    </div>
-                </div>
-                <p class="lh-lg mt-3">
-                    Morbi sit egestas dignissim pharetra, sed amet. Tempus justo senectus risus ac vel, velit,
-                    nunc. Eget commodo eget in aliquam facilisi facilisi nec magna hendrerit. Placerat ipsum sit
-                    tellus urna, faucibus aenean lorem faucibus integer.
-                </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4 class="mt-3">Features</h4>
-                        <ul>
-                            <li>feature 1</li>
-                            <li>feature 2</li>
-                            <li>feature 3</li>
-                            <li>feature 4</li>
-                            <li>feature 5</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 d-flex justify-content-between mt-3 other-images">
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100 h-75" alt="">
-                        </div>
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-bg rounded-4 p-3" data-aos="fade-left">
+            <div class="portfolio-bg rounded-4 p-3" data-aos="fade-up">
 
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="tag py-2 rounded-2 my-3">Graphic Design</div>
-                        <h3>EduCaring</h3>
+                        <div class="tag py-2 rounded-2 my-3">{{portfolios[3].type}}</div>
+                        <h3>{{portfolios[3].title}}</h3>
                         <p class="lh-lg">
-                            Morbi sit egestas dignissim pharetra, sed amet. Tempus justo senectus risus ac vel, velit,
-                            nunc. Eget commodo eget in aliquam facilisi facilisi nec magna hendrerit. Placerat ipsum sit
-                            tellus urna, faucibus aenean lorem faucibus integer.
+                          {{portfolios[3].body}}
                         </p>
                     </div>
                     <div class="col-md-5 rounded-3 mt-4">
-                        <img src="assets/images/portfolio1.svg" class="img-fluid rounded-3" alt="">
+                        <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[3].images[0].file_name" class="img-fluid rounded-3" alt="">
                     </div>
                 </div>
 
@@ -131,25 +112,21 @@
                     <div class="col-md-6">
                         <h4 class="mt-3">Features</h4>
                         <ul>
-                            <li>feature 1</li>
-                            <li>feature 2</li>
-                            <li>feature 3</li>
-                            <li>feature 4</li>
-                            <li>feature 5</li>
+                            <li *ngFor="let category of categories">{{category}}</li>
                         </ul>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-between mt-3 other-images">
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100 h-75" alt="">
+                    <div class="col-md-6 d-flex justify-content-between mt-3 other-images" *ngIf="portfolios[3].images[1]">
+                        <div class="p-1" *ngIf="portfolios[3].images[1]">
+                            <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[3].images[1].file_name" class="w-100 h-75" alt="">
                         </div>
-                        <div class="p-1">
-                            <img src="assets/images/services1.svg" class="w-100" alt="">
+                        <div class="p-1" *ngIf="portfolios[3].images[2]">
+                            <img [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[3].images[2].file_name" class="w-100" alt="">
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
-        </div>
     </div>
+  </div>
 </section>

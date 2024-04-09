@@ -2,7 +2,7 @@
     <div class="container">
         <div class="contact p-3">
             <div class="row">
-                <div class="col-lg-6" data-aos="fade-left"  data-aos-duration="1000">
+                <div class="col-lg-6" data-aos="fade-up"  data-aos-duration="1000">
                     <div class="image-container">
                         <img class="w-100" src="assets/images/contact.svg" alt="">
                     </div>
@@ -13,8 +13,8 @@
                         <h3><span>Get Started</span> and develop
                             your business <span>now</span>.
                         </h3>
-                        <form action="" method="post">
-                            <input type="email" name="email">
+                        <form [formGroup]="emailFormGroup" method="post" (ngSubmit)="onSubscribe()">
+                            <input formControlName="email" type="email" name="email" placeholder="Enter Email Address">
                             <button class="btn-cta" type="submit"><span class="me-2">Send</span> <i
                                     class="fa-solid fa-paper-plane"></i></button>
                         </form>

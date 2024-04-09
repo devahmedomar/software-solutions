@@ -1,11 +1,11 @@
-<section class="team">
+<section class="team overflow-x-hidden">
     <div class="container">
         <h2 class="section-header">our Team</h2>
         <ngx-slick-carousel class="carousel mt-4" #slickModal="slick-carousel" [config]="slideConfig" data-aos="fade-left"  data-aos-duration="700">
             <div ngxSlickItem class="slide text-center card border-0" *ngFor="let slide of slides">
                 <img src="{{ slide.img }}" alt="" class="card-img-top">
                 <h4 class="card-title">{{slide.name}}</h4>
-                <p class="card-text">{{slide.title}}</p>
+                <p class="card-text">{{slide.job_name}}</p>
             </div>
         </ngx-slick-carousel>
     </div>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row separator">
             <div class="col-3 d-flex align-items-center">
-                <img class="logo" src="assets/images/logo.svg" alt="">
+                <img class="logo" [src]="'https://admin.fivesolutions.net/images/logos/'+contactsData[0]?.logo" alt="">
             </div>
             <div class="col-9 d-flex align-items-center">
                 <div class="text-md-end text-end ms-auto">
@@ -44,12 +44,11 @@
             <div class="col-md-4">
                 <h3>Contact Us</h3>
                 <div class="contact-info">
-                    united St, alsahel albahary
-                    <br>tema, sohag
+                  {{contactsData[0]?.address}}
                 </div>
                 <div class="contact-info">
-                    +20 1123304107
-                    <br>sherifaboz43@gmail.com
+                    {{contactsData[0]?.mobile}}
+                    <br>{{contactsData[0]?.email}}
                 </div>
             </div>
             <div class="col-md-4">

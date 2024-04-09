@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
@@ -10,6 +11,9 @@ import { HeroComponent } from './components/hero/hero.component';
 import { WhyComponent } from './components/why/why.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -28,9 +32,13 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
   imports: [
     CommonModule,
     SlickCarouselModule,
-    
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+
   ]
 })
 export class LandingModule {
-  
+
  }

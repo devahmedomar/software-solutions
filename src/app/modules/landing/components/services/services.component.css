@@ -1,34 +1,45 @@
-.services .ellipse{
-    position: absolute;
-    top: -10%;
-    right: -200px;
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    background-color: var(--goldenColor);
-    z-index: -1;
+.services .ellipse {
+  position: absolute;
+  top: -10%;
+  right: -200px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background-color: var(--goldenColor);
+  z-index: -1;
 
 }
 
 
-.services .nav-link{
-    color: var(--grayColor);
-    text-align: left;
-    font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    margin-top: 15px;
-    
-}
-.services .nav-link.active,
-.services .nav-link:hover
-{
-    color: var(--secondaryColor);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* box-shadow: var(--goldenColor) 0px 8px 24px; */
-    background-color: white;
+.services a {
+  color: var(--grayColor);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+
 }
 
-.services img{
-    width: 100%;
+.services a.active,
+.services a:hover {
+  color: var(--secondaryColor);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+}
+
+.services img {
+  width: 100%;
+}
+
+
+
+
+.tab-pane.show {
+  display: block;
+  width: 100%;
 }

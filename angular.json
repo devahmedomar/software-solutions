@@ -33,6 +33,7 @@
               "node_modules/slick-carousel/slick/slick.css",
               "node_modules/slick-carousel/slick/slick-theme.css",
               "node_modules/aos/dist/aos.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": [

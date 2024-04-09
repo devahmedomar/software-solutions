@@ -9,6 +9,6 @@ import * as Aos from 'aos';
 export class HomeComponent implements OnInit{
   ngOnInit(): void {
     Aos.init({startEvent: 'scroll'})
-  
+
   }
 }

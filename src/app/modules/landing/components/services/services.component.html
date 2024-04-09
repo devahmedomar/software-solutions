@@ -1,50 +1,33 @@
-<section class="services position-relative">
-    <div class="container">
-        <h2 class="section-header">Services</h2>
-        <div class="ellipse"></div>
-        <div class="row mt-2">
-            <div data-aos="zoom-in-up" data-aos-duration="2000" class="col-md-5 nav flex-column nav-pills py-3" id="v-pills-tab" role="tablist"
-                aria-orientation="vertical">
-                <button class="nav-link active" id="v-pills-mobile-tab" data-bs-toggle="pill"
-                    data-bs-target="#v-pills-mobile" type="button" role="tab" aria-controls="v-pills-mobile"
-                    aria-selected="true">
-                    <span class="me-3">01</span>
-                     <span>MOBILE DEVELOPMENT</span>
-                    </button>
-                <button class="nav-link" id="v-pills-web-tab" data-bs-toggle="pill"
-                    data-bs-target="#v-pills-web" type="button" role="tab" aria-controls="v-pills-web"
-                    aria-selected="false">
-                    <span class="me-3">02</span>
-                    <span>WEB DEVELOPMENT</span>
-                </button>
-                <button class="nav-link" id="v-pills-ux-tab" data-bs-toggle="pill"
-                    data-bs-target="#v-pills-ux" type="button" role="tab" aria-controls="v-pills-ux"
-                    aria-selected="false">
-                    <span class="me-3">03</span>
-                    <span>UI/UX DESIGN</span>
-                </button>
-                <button class="nav-link" id="v-pills-logo-tab" data-bs-toggle="pill"
-                    data-bs-target="#v-pills-logo" type="button" role="tab" aria-controls="v-pills-logo"
-                    aria-selected="false">
-                    <span class="me-3">04</span>
-                    <span>LOGO BRANDING</span>
-                   </button>
-            </div>
-            <div class="tab-content col-md-7" id="v-pills-tabContent" data-aos="zoom-in-left" data-aos-duration="2000">
-                <div class="tab-pane fade show active" id="v-pills-mobile" role="tabpanel"
-                    aria-labelledby="v-pills-mobile-tab">
-                    <img src="assets/images/services1.svg" alt="">
-                </div>
-                <div class="tab-pane fade" id="v-pills-web" role="tabpanel" aria-labelledby="v-pills-web-tab">
-                    <img src="assets/images/services1.svg" alt="">
-                </div>
-                <div class="tab-pane fade" id="v-pills-ux" role="tabpanel" aria-labelledby="v-pills-ux-tab">
-                    <img src="assets/images/services1.svg" alt="">
-                </div>
-                <div class="tab-pane fade" id="v-pills-logo" role="tabpanel" aria-labelledby="v-pills-logo-tab">
-                    <img src="assets/images/services1.svg" alt="">
-                </div>
-            </div>
-        </div>
+<section class="services position-relative overflow-hidden">
+  <div class="container">
+    <h2 class="section-header">Services</h2>
+  </div>
+  <div class="container position-relative">
+
+    <div class="ellipse"></div>
+    <div class="row mt-2">
+
+
+      <ul class="col-md-5 nav flex-column nav-tabs py-3 mt-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <li *ngFor="let tab of services;let i=index" >
+          <a [class.active]="tab.active" (click)="selectTab(tab)">
+            <span class="me-3">{{i + 1}}</span>
+            <span>{{tab.title}}</span>
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content col-md-7">
+        <ng-container *ngFor="let tab of services">
+          <div class="tab-pane" [class.show]="tab.active">
+            <img [src]="tab.image" alt="">
+          </div>
+        </ng-container>
+
+      </div>
+
+
+
+
     </div>
+  </div>
 </section>
