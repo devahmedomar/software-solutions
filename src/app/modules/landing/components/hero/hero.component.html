@@ -1,11 +1,13 @@
 <section class="hero d-flex align-items-center">
+  <ngx-spinner bdColor="rgba(10,10,10,0.99)" size="medium" color="#FDC80A" type="ball-pulse"></ngx-spinner>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-5 d-flex align-items-center">
                 <div class="hero-content mt-5 mt-lg-0" data-aos="fade-up" data-aos-duration="1000">
                     <h1>{{title}}</h1>
                     <p class="mb-4">{{body}}</p>
-                    <a href="#" class="btn-cta d-inline-block mb-4">Contact Us</a>
+                    <a routerLink="/contact" class="btn-cta d-inline-block mb-4">Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-7" data-aos="fade-up" data-aos-duration="2000">

@@ -8,6 +8,7 @@ import { HomeService } from 'src/app/modules/landing/services/home.service';
 })
 export class FooterComponent implements OnInit {
   contactsData:any[] = []
+  portfolios: any[]=[];
   constructor(private _HomeService:HomeService){}
   getFooterData(){
     this._HomeService.getHomeData().subscribe({
@@ -19,8 +20,20 @@ export class FooterComponent implements OnInit {
     })
 
   }
+  getAbout(){
+    this._HomeService.getHomeData().subscribe({
+      next:(res)=>{
+        this.portfolios = res.portfolios;
+      },
+      error:(err)=>{
+        console.log(err);
+
+      }
+    })
+  }
   ngOnInit(): void {
     this.getFooterData()
+    this.getAbout()
   }
 
 

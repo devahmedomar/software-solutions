@@ -13,7 +13,7 @@
     font-size: 16px;
     font-weight: 600;
     border: 1px solid #EAEAF6;
-    width: 190px; 
+    width: 190px;
     text-align: center;
 }
 .portfolio .portfolio-bg{
@@ -53,21 +53,21 @@
 }
 
 .portfolio .portfolio-bg:nth-child(1):hover{
-    position: absolute;
-    top: 0;
-    transform: scale(1.1);
-    width: 61%;
+    /* position: absolute;
+    top: 0; */
+    transform: scale(1.09);
+    /* width: 61%; */
     height: auto;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     z-index: 100;
 }
 .portfolio .portfolio-bg:nth-child(2):hover{
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    right: 0;
-    transform: scale(1.1);
-    width: 41%;
+    right: 0; */
+    transform: scale(1.09);
+    /* width: 41%; */
     height: auto;
     padding-right: 50px !important;
     background-color: white;
@@ -75,20 +75,21 @@
     z-index: 100;
 }
 .portfolio .portfolio-bg:nth-child(3):hover{
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    transform: scale(1.1);
-    width: 41%;
+    left: 0; */
+    transform: scale(1.09);
+    /* width: 41%; */
     height: auto;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     z-index: 100;
 }
 .portfolio .portfolio-bg:nth-child(4):hover{
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    right: 0;
-    transform: scale(1.1);
+    right: 0; */
+    transform: scale(1.09);
     width: 61%;
     height: auto;
     padding-right: 50px !important;
@@ -125,7 +126,7 @@ font-weight: 500;
 }
 @media (max-width:991px) {
     .portfolio ul li{
-      
+
         font-size: 15px;
         line-height: 30px;
         }
@@ -139,7 +140,7 @@ font-weight: 500;
     }
     .portfolio .portfolio-bg:nth-child(1){
         width: 80%;
-        
+
     }
     .portfolio .portfolio-bg:nth-child(2){
         width: 80%;
@@ -153,15 +154,14 @@ font-weight: 500;
     }
     .portfolio .portfolio-bg:nth-child(1):hover,.portfolio .portfolio-bg:nth-child(2):hover,.portfolio .portfolio-bg:nth-child(3):hover,
     .portfolio .portfolio-bg:nth-child(4):hover{
-        width: 85%;
+        /* width: 81%; */
         height: auto;
+        width: 100%;
+        transform: scale(1.09);
         z-index: 200;
-
-        transform: scale(1);
-
     }
 
 }
 @media (max-width:767px) {
-    
+
 }

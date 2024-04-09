@@ -14,6 +14,8 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -35,6 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
+    NgxSpinnerModule
 
 
   ]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 import { HomeService } from '../../services/home.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-team',
@@ -13,10 +14,12 @@ export class TeamComponent implements OnInit {
   title: string = "";
   slides: any[] = [];
   slideConfig: object = {}
-  constructor(private _HomeService: HomeService) { }
+  constructor(private _HomeService: HomeService,private spinner: NgxSpinnerService) { }
   getTeam() {
+    this.spinner.show()
     this._HomeService.getHomeData().subscribe({
       next: (res) => {
+
         for (let index = 0; index < res.founders?.length; index++) {
           console.log(res.founders[index]?.image);
           this.slides.push({
@@ -26,8 +29,7 @@ export class TeamComponent implements OnInit {
           })
 
         }
-        console.log(this.slides);
-
+        this.spinner.hide()
         this.slideConfig = {
           "slidesToShow": 3, "slidesToScroll": 3, dots: true,
           responsive: [
@@ -56,7 +58,9 @@ export class TeamComponent implements OnInit {
           ]
         };
       },
-      error: () => { }
+      error: () => {
+        this.spinner.hide()
+       }
     })
 
   }

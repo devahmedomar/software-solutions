@@ -34,6 +34,7 @@
               "node_modules/slick-carousel/slick/slick-theme.css",
               "node_modules/aos/dist/aos.css",
               "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-pulse.css",
               "src/styles.css"
             ],
             "scripts": [

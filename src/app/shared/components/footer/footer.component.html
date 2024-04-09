@@ -1,4 +1,4 @@
-<footer>
+<footer class="pb-4">
     <div class="container">
         <div class="row separator">
             <div class="col-3 d-flex align-items-center">
@@ -18,10 +18,10 @@
             <div class="col-md-2">
                 <h3>Company</h3>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-decoration-none">About Us</a></li>
-                    <li><a href="#" class="text-decoration-none">Services</a></li>
-                    <li><a href="#" class="text-decoration-none">Portfolio</a></li>
-                    <li><a href="#" class="text-decoration-none">our team</a></li>
+                    <li><a routerLink="about" class="text-decoration-none">About Us</a></li>
+                    <li><a routerLink="services" class="text-decoration-none">Services</a></li>
+                    <li><a routerLink="portfolio" class="text-decoration-none">Portfolio</a></li>
+                    <li><a routerLink="team" class="text-decoration-none">our team</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
@@ -53,7 +53,7 @@
             </div>
             <div class="col-md-4">
                 <h3>Our Latest Project</h3>
-                <img class="img-fluid" src="assets/images/latestProjects.svg" alt="">
+                <img class="img-fluid w-100 rounded-2" [src]="'https://admin.fivesolutions.net/images/portfolios/'+portfolios[portfolios.length-1]?.images[0]?.file_name" alt="">
 
             </div>
         </div>
